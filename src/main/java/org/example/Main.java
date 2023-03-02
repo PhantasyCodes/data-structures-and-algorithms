@@ -1,23 +1,18 @@
 package org.example;
 
+import org.example.algorithms.SearchAlgorithms;
+import org.example.algorithms.SortAlgorithms;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
+        int[] array = {3, 5, 1, 4, 2, 6, 9, 7, 8, 10};
 
-        DynamicArray dynamicArray = new DynamicArray();
+        int[] newArray = SortAlgorithms.selectionSort(array);
 
-        dynamicArray.add("A");
-        dynamicArray.add("B");
-        dynamicArray.add("C");
-
-        dynamicArray.insert(9, "X");
-
-        dynamicArray.delete("A");
-
-        System.out.println(
-                dynamicArray + "\n" +
-                "empty: " + dynamicArray.isEmpty() + "\n" +
-                "size: " + dynamicArray.size + "\n" +
-                "capacity: " + dynamicArray.capacity
-        );
+        System.out.println(Arrays.toString(newArray));
     }
+
+
 }

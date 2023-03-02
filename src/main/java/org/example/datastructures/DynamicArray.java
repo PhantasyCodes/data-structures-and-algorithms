@@ -1,10 +1,10 @@
-package org.example;
+package org.example.datastructures;
 
 public class DynamicArray {
 
-    int size;
-    int capacity = 10;
-    Object[] array;
+    public int size;
+    public int capacity = 5;
+    public Object[] array;
 
     public DynamicArray() {
         this.array = new Object[capacity];
@@ -37,39 +37,63 @@ public class DynamicArray {
 
     public void delete(Object data) {
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < capacity; i++) {
             if (array[i] == data) {
                 array[i] = null;
                 size--;
 
                 for (int j=(i+1); j < capacity; j++) {
-                    i = j - 1;
                     array[i] = array[j];
-                    System.out.println(j);
+                    i++;
                 }
 
                 array[capacity - 1] = null;
 
-                if(size<=(int) (capacity/3)) {
-                    shrink();
-                }
-
                 break;
             }
+        }
 
+        if (size < (capacity/2)) {
+            shrink();
         }
 
     }
 
-    public int search(Object[] data) {
+    public int search(Object data) {
+
+        for (int i = 0; i < capacity; i++) {
+            if (array[i] == data) {
+                return i;
+            }
+        }
         return -1;
     }
 
     private void grow() {
 
+        int newCapacity = (int)(capacity * 2);
+        Object[] newArray = new Object[newCapacity];
+
+        for (int i =0; i < capacity; i++ ) {
+            newArray[i] = array[i];
+        }
+
+        capacity = newCapacity;
+        array = newArray;
+
     }
 
     private void shrink() {
+
+        int newCapacity = (int)(capacity / 2);
+        Object[] newArray = new Object[newCapacity];
+
+        for (int i = 0; i < size; i++ ) {
+            newArray[i] = array[i];
+        }
+
+        capacity = newCapacity;
+        array = newArray;
 
     }
 

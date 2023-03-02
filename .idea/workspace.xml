@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e4e18ba-0313-48d6-bf0d-4040642a8eed" name="Changes" comment="Created project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DynamicArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/datastructures/DynamicArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677600798979</updated>
-      <workItem from="1677600799182" duration="6019000" />
+      <workItem from="1677600799182" duration="18185000" />
     </task>
     <task id="LOCAL-00001" summary="Created project">
       <created>1677600963367</created>
@@ -85,7 +86,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
